@@ -8,13 +8,52 @@
 
 my_number_list = [5, 64, 48, 65, 43, 64, 87, 23, 65, 38, 9]
 
-with open ('random_number.txt', 'r') as reader:
-    reader_1 = reader.readlines()  
-    reader_1.remove(reader_1[0])
-    random_number = reader_1[0]
-    with open('random_number.txt', 'w') as writer:
+def random_number_1():
+
+    with open ('random_number_1.txt', 'r') as reader:
+        reader_1 = reader.readlines()  
+        reader_1.remove(reader_1[0])
+        random_number_1 = reader_1[0]
+
+    with open('random_number_1.txt', 'w') as writer:
         for i in range(len(reader_1)):
             writer.writelines(reader_1[i])
 
+    with open ('random_number_1.txt', 'a') as appender:
+        appender.write(random_number_1)
 
-print(random_number)
+    random_number_1 = int(random_number_1)%10
+
+    return random_number_1
+
+
+
+
+def random_number_2():
+
+    with open ('random_number_2.txt', 'r') as reader:
+        reader_1 = reader.readlines()  
+        reader_1.remove(reader_1[0])
+        random_number_2 = reader_1[0]
+
+    with open('random_number_2.txt', 'w') as writer:
+        for i in range(len(reader_1)):
+            writer.writelines(reader_1[i])
+
+    with open ('random_number_2.txt', 'a') as appender:
+        appender.write(random_number_2)
+   
+    random_number_2 = int(random_number_2)%10
+
+    return random_number_2
+
+
+random_number = str(random_number_1())+ str(random_number_2())
+
+# print(random_number)
+
+import datetime
+
+now = datetime.datetime.now()
+
+print(now.microsecond//10000)
