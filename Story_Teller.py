@@ -3,3 +3,12 @@
 # Here, the aim is to create a random story each time the user runs the program. The story will be the same always but with little variation with the input. This is a fun but exciting python project which will work wonders with beginners to gain confidence in python.
 
 # In a nutshell, the program will ask users for inputs such as the name of a place, action, etc. and then build a story around the data.  
+
+
+import random
+
+my_number_list = [5, 64, 48, 65, 43, 64, 87, 23, 65, 38, 9]
+
+print(random.choice(my_number_list))
+
+
