@@ -5,10 +5,16 @@
 # In a nutshell, the program will ask users for inputs such as the name of a place, action, etc. and then build a story around the data.  
 
 
-import random
 
 my_number_list = [5, 64, 48, 65, 43, 64, 87, 23, 65, 38, 9]
 
-print(random.choice(my_number_list))
+with open ('random_number.txt', 'r') as reader:
+    reader_1 = reader.readlines()  
+    reader_1.remove(reader_1[0])
+    random_number = reader_1[0]
+    with open('random_number.txt', 'w') as writer:
+        for i in range(len(reader_1)):
+            writer.writelines(reader_1[i])
 
 
+print(random_number)
