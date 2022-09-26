@@ -56,8 +56,31 @@ import datetime
 
 now = datetime.datetime.now()
 
-print(now.microsecond//10000)
+# print(now.microsecond//10000)
 
 
 
 # download dictionary file
+
+import pandas as pd
+
+dictonary_file = pd.read_csv('dictionary.csv')
+
+words_column = dictonary_file['words']
+
+# print(words_column)
+
+
+grammar_column = dictonary_file['grammar']
+
+# print(grammar_column)
+
+meaning_column = dictonary_file["Meaning"]
+
+# print(meaning_column)
+
+for i in range(len(words_column)):
+    print('{} -- {}'.format(words_column[i], meaning_column[i]))
+
+
+
