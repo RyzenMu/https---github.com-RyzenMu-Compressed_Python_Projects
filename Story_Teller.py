@@ -57,3 +57,7 @@ import datetime
 now = datetime.datetime.now()
 
 print(now.microsecond//10000)
+
+
+
+# download dictionary file
