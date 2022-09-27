@@ -63,32 +63,56 @@ print(now.microsecond//10000)
 # download dictionary file
 
 import pandas as pd
+def panda5():
+    dictonary_file = pd.read_csv('dictionary.csv')
 
-dictonary_file = pd.read_csv('dictionary.csv')
+    words_column = dictonary_file['words']
 
-words_column = dictonary_file['words']
-
-print(words_column)
+    print(words_column)
 
 
-grammar_column = dictonary_file['grammar']
+    grammar_column = dictonary_file['grammar']
 
-print(grammar_column)
+    print(grammar_column)
 
-meaning_column = dictonary_file["Meaning"]
+    meaning_column = dictonary_file["Meaning"]
 
-print(meaning_column)
+    print(meaning_column)
 
-for i in range(len(words_column)):
-    print('{} -- {}'.format(words_column[i], meaning_column[i]))
+    for i in range(len(words_column)):
+        print('{} -- {}'.format(words_column[i], meaning_column[i]))
 
 
 
 #reading csv file from import csv module
+import csv
+def csv6():
+    with open('dictionary.csv', newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            print(row)
+
+import csv
+def csv7():
+    with open('dictionary.csv', newline='') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            print(row)
+
+
+
 
 #turn ascii value to alphabets
 
-#
+#convert alphabets into words of 5 letters of your choice using permutation and combination
+
+#match the generated words with dictionary words
+
+#print the matched results
+
+#create a set of 50 words and narrate a story using verbs and adjectives
+
+#end
 
 
 
