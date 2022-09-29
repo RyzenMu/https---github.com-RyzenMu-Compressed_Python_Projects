@@ -136,7 +136,7 @@ for i in range(50):
     print(small_alphabets)
 
 #match the generated words with dictionary words
-
+print(large_alphabet+small_alphabets)
 #print the matched results
 
 #end
