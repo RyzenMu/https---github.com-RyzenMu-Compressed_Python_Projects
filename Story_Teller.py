@@ -137,7 +137,14 @@ for i in range(50):
 
 #match the generated words with dictionary words
 print(large_alphabet+small_alphabets)
+
+for new_words in dictionary:
+    print(new_words)
+
+
+
 #print the matched results
+
 
 #end
 
