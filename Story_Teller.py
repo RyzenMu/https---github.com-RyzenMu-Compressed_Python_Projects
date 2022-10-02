@@ -105,12 +105,12 @@ def csv7():
 
 #turn ascii value to alphabets
 
-for i in range(65, 91):
+for i in range(65, 90):
     ascii = chr(i)
     print(ascii, end='')
 print()
 
-for i in range(97, 123):
+for i in range(97, 122):
     ascii = chr(i)
     print(ascii, end='')
 print()
@@ -118,31 +118,30 @@ print()
 
 #convert alphabets into words of 5 letters of your choice using permutation and combination
 
-large_alphabet = chr(random.randint(65, 91))
+large_alphabet = chr(random.randint(65, 90))
 print(large_alphabet)
 
 small_alphabets = ''
 for i in range(4):
-    small_alphabets += chr(random.randint(97, 123))
+    small_alphabets += chr(random.randint(97, 122))
 
 print(small_alphabets)
 
 #create a set of 50 words and narrate a story using verbs and adjectives
 for i in range(50):
+    large_alphabet = chr(random.randint(65, 90))
     small_alphabets = ''
     for i in range(4):
-        small_alphabets += chr(random.randint(97, 123))
-
-    print(small_alphabets)
+        small_alphabets += chr(random.randint(97, 122))
+    new_word = large_alphabet+small_alphabets
+    print(new_word)
+    dictonary_file = pd.read_csv('dictionary.csv')
+    words_column = dictonary_file['words']
+    words = [word for word in words_column]
+    if new_word in words:
+        print(new_word)
 
 #match the generated words with dictionary words
-print(large_alphabet+small_alphabets)
-
-for new_words in dictionary:
-    print(new_words)
-
-
-
 #print the matched results
 
 
