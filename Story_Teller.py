@@ -139,15 +139,18 @@ for i in range(50):
     words_column = dictonary_file['words']
     words = [word for word in words_column]
     if new_word in words:
-        print(new_word)
+        print("new word : " , new_word)
+else:
+        print('No match found')
 
 #match the generated words with dictionary words
+
 #print the matched results
 
 
 #end
 
-# to be done
+
 
 
 
