@@ -1,7 +1,8 @@
 from tkinter import *
 import tkinter as tk
 
-def Tkinter_HelloWorld():
+# Hello World in Tkinter
+def tkinter_HelloWorld():
 
     root = Tk() #Create the root (base) window
 
@@ -13,7 +14,7 @@ def Tkinter_HelloWorld():
 
 
 
-
+# Simple Application in Tkinter
 def simpleTkinterApplication():
     class Application(tk.Frame):
 
@@ -32,4 +33,19 @@ def simpleTkinterApplication():
     app = Application()
     app.master.title('Sample application')
     app.mainloop()
+
+
+# Simple Button in Tkinter
+
+def buttonInTkinter():
+    r= Tk()
+    r.title('Counting Seconds')
+    button = tk.Button(r, text='Stop', width=25, command=r.destroy)
+    button.pack()
+    r.mainloop()
+
+
+
+
+
 
