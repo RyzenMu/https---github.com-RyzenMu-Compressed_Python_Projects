@@ -222,10 +222,30 @@ frame = Tk()
 frame.geometry('400x200')
 frame.title('Youtube downloader')
 geek = Label(frame, text='Youtube downloader', font=('calibre', '25', 'bold'))
-geek.grid(row=0, columnspan=1)
+geek.grid(row=0, columnspan=2)
+name_var = tk.StringVar()
+middle_var = tk.StringVar()
+pass_var = tk.StringVar()
 
+name_label = Label(frame, text='username')
+name_label.grid(row=1, column=0)
+name_entry  = Entry(frame, textvariable=name_var)
+name_entry.grid(row=1, column=1)
+
+middle_label = Label(frame, text='middle')
+middle_label.grid(row=2, column=0)
+middle_entry = Entry(frame, textvariable=middle_var)
+middle_entry.grid(row=2, column=1)
+
+
+pass_label  = Label(frame, text='password')
+pass_label.grid(row=3, column=0)
+pass_entry = Entry(frame, textvariable=pass_var)
+pass_entry.grid(row=3, column=1)
 
 frame.mainloop()
+print(name_var.get()+ middle_var.get() + pass_var.get())
+
 
 
 
