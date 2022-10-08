@@ -26,9 +26,10 @@ def download():
     except:
         print('connection error')
 
-    mp4files = yt.filter('mp4')
+    mp4files = yt.filter(progressive = True, 
+                file_extension = "mp4").first().download(output_path = SAVE_PATH)
     yt.set_filename('Tkinter Youtube downloaded video')
-    d_video = yt.get(mp4files[-1].extension, mp4files[-1].resolution)
+    d_video = yt.get_videos(mp4files[-1].extension, mp4files[-1].resolution)
     try:
         d_video.download(SAVE_PATH)
     except:
